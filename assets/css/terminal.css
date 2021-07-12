@@ -1,4 +1,37 @@
 body {
     font-family: 'IBM Plex Mono', monospace;
+    background: url(../img/matrix-large.jpg) center/cover no-repeat fixed;
+    min-height: 100vh;
+    color: white;
+    padding: 1% 2%;
 }
 
+
+header a {
+    display: block;
+    color: white;
+    font-size: 0.9em;
+    padding-bottom: 2%;
+}
+header > a img{
+    width: 5%;
+}
+
+
+#terminal ul {
+    text-align: left;
+    font-size: 1.5em;
+    padding-left: 1.2em;
+    color: white;
+}
+#terminal ul > li > ul {
+    font-size: 0.8em;
+}
+#terminal ul > li a {
+    color: white;
+    padding-bottom: 0%;
+}
+
+#terminal ul > li a:hover {
+    text-decoration: underline;
+} 
