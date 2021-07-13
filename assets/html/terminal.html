@@ -7,21 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="../css/terminal.css">
-    <link rel="stylesheet" href="../css/style.css">
 
     <title>Terminal commands</title>
 </head>
 
-<body>
-    <header>
-        <a href="javascript:history.back()"><img src="../img/Back_Button.png" alt=""></a>
-        <!-- <a href="javascript:history.back()">zurück</a> -->
-    </header>
-    <main>
-        <nav id="terminal">
+<body id="top">
+    <header id="navigation">
+        <nav>
             <ul>
                 <li>
-                    browsing commands
+                    <a href="../../index.html">Home</a>
+                </li>
+                <li>
+                    Browsing
                     <ul>
                         <li><a href="#pwd">pwd</a></li>
                         <li><a href="#ls">ls</a></li>
@@ -29,19 +27,313 @@
                     </ul>
                 </li>
                 <li>
-                    <br>File & folder<br>operations
+                    Files & folders
                     <ul>
-                        <li><a href="#pwd">touch</a></li>
-                        <li><a href="#ls">mkdir</a></li>
+                        <li><a href="#touch">touch</a></li>
                         <li><a href="#cp">cp</a></li>
                         <li><a href="#mv">mv</a></li>
                         <li><a href="#rm">rm</a></li>
-                        
                     </ul>
                 </li>
-
+                <li>
+                    File content
+                    <ul>
+                        <li><a href="#cat">cat</a></li>
+                        <li><a href="#head">head</a></li>
+                        <li><a href="#less">less</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
+    </header>
+    <main>
+
+        <section class="cmd-area">
+
+            <article id="pwd" class="cmd">
+                <h2>pwd</h2>
+                <p class="usage">Usage: pwd [-LPW]</p>
+                <p class="purpose">Print the name of the current working directory.</p>
+                <p class="options">
+                    Options:<br>
+                    -L print the value of $PWD if it names the current working
+                    directory<br>
+                    -P print the physical directory, without any symbolic links<br>
+                    -W print the Win32 value of the physical directory
+                </p>
+                <p class="remarks">
+                    By default, `pwd' behaves as if `-L' were specified.
+                </p>
+                <p class="exit">
+                    Exit Status:<br>
+                    0 unless an invalid option is given or the current directory
+                    cannot be read.
+                </p>
+                <a href="#top">▲</a>
+            </article>
+
+            <article id="ls" class="cmd">
+                <h2>ls</h2>
+                <p class="usage">
+                    Usage: ls [OPTION]... [FILE]...
+                </p>
+                <p class="purpose">
+                    List information about the FILEs (the current directory by default).
+                </p>
+                <p class="options">
+                    Options (small selection, only the most used):<br>
+                    -a, --all do not ignore entries starting with .<br>
+                    -l use a long listing format<br>
+                    --help display this help and exit<br>
+                </p>
+                <p class="remarks">
+
+                </p>
+                <p class="exit">
+                    Exit Status:<br>
+                    0 if OK, <br>
+                    1 if minor problems (e.g., cannot access subdirectory),<br>
+                    2 if serious trouble (e.g., cannot access command-line argument).<br>
+                </p>
+                <a href="#navigation">▲</a>
+            </article>
+
+            <article id="cd" class="cmd">
+                <h2>cd</h2>
+                <p class="usage">
+                    Usage: cd [-L|[-P [-e]] [-@]] [dir]
+                </p>
+                <p class="purpose">
+                    Change the shell working directory.
+                    Change the current directory to DIR. The default DIR is the value of the
+                    HOME shell variable.
+                </p>
+                <p class="options">
+                    Options:<br>
+                    -L force symbolic links to be followed: resolve symbolic links in DIR after processing instances of
+                    `..'<br>
+                    -P use the physical directory structure without following symbolic links: resolve symbolic links in
+                    DIR before processing instances of `..'<br>
+                    -e if the -P option is supplied, and the current workingdirectory cannot be determined successfully,
+                    exit with a non-zero status<br>
+                    -@ on systems that support it, present a file with extended attributes as a directory containing the
+                    file attributes<br>
+                </p>
+                <p class="remarks">
+                    The default is to follow symbolic links, as if `-L' were specified.
+                    `..' is processed by removing the immediately previous pathname component
+                    back to a slash or the beginning of DIR.
+                </p>
+                <p class="exit">
+                    Exit Status:<br>
+                    Returns 0 if the directory is changed, and if $PWD is set successfully when
+                    -P is used; non-zero otherwise.
+                </p>
+                <a href="#top">▲</a>
+            </article>
+
+            <article id="touch" class="cmd">
+                <h2>touch</h2>
+                <p class="usage">
+                    Usage: touch [OPTION]... FILE...
+                </p>
+                <p class="purpose">
+                    A FILE argument that does not exist is created empty, unless -c or -h
+                    is supplied.<br>
+                    Update the access and modification times of each FILE to the current time.<br>
+                    A FILE argument string of - is handled specially and causes touch to
+                    change the times of the file associated with standard output.<br>
+                </p>
+                <p class="options">
+                    Options:<br>
+                    -c, --no-create do not create any files<br>
+                    -d, --date=STRING parse STRING and use it instead of current time<br>
+                    -a change only the access time<br>
+                    -m change only the modification time<br>
+                </p>
+                <p class="remarks">
+                    Note that the -d option accept different time-date formats.
+                </p>
+                <a href="#top">▲</a>
+            </article>
+
+            <article id="cp" class="cmd">
+                <h2>cp</h2>
+                <p class="usage">
+                    Usage: cp [OPTION]... [-T] SOURCE DEST<br>
+                    or: cp [OPTION]... SOURCE... DIRECTORY<br>
+                    or: cp [OPTION]... -t DIRECTORY SOURCE...<br>
+                </p>
+                <p class="purpose">
+                    Copy SOURCE to DEST, or multiple SOURCE(s) to DIRECTORY.
+                </p>
+                <p class="options">
+                    Options:<br>
+                    -a, --archive same as -dR --preserve=all<br>
+                    --attributes-only don't copy the file data, just the attributes<br>
+                    -f, --force if an existing destination file cannot be opened, remove it and try again (this option
+                    is ignored when the -n option is also used)<br>
+                    -i, --interactive prompt before overwrite (overrides a previous -n option)<br>
+                    -n, --no-clobber do not overwrite an existing file (overrides a previous -i option)<br>
+                    -R, -r, --recursive copy directories recursively<br>
+                    -t, --target-directory=DIRECTORY copy all SOURCE arguments into DIRECTORY<br>
+                    -T, --no-target-directory treat DEST as a normal file<br>
+                    -u, --update copy only when the SOURCE file is newer than the destination file or when the
+                    destination file is missing<br>
+                    -v, --verbose explain what is being done<br>
+                </p>
+                <a href="#top">▲</a>
+            </article>
+
+            <article id="mv" class="cmd">
+                <h2>mv</h2>
+                <p class="usage">
+                    Usage: mv [OPTION]... [-T] SOURCE DEST<br>
+                    or: mv [OPTION]... SOURCE... DIRECTORY<br>
+                    or: mv [OPTION]... -t DIRECTORY SOURCE...<br>
+                </p>
+                <p class="purpose">
+                    Rename SOURCE to DEST, or move SOURCE(s) to DIRECTORY.
+                </p>
+                <p class="options">
+                    Options:<br>
+                    -f, --force do not prompt before overwriting<br>
+                    -i, --interactive prompt before overwrite<br>
+                    -n, --no-clobber do not overwrite an existing file<br>
+                    -t, --target-directory=DIRECTORY copy all SOURCE arguments into DIRECTORY<br>
+                    -T, --no-target-directory treat DEST as a normal file<br>
+                    -u, --update copy only when the SOURCE file is newer than the destination file or when the
+                    destination file is missing<br>
+                    -v, --verbose explain what is being done<br>
+                </p>
+
+                <a href="#top">▲</a>
+            </article>
+
+            <article id="rm" class="cmd">
+                <h2>rm</h2>
+                <p class="usage">
+                    Usage: rm [OPTION]... [FILE]...
+                </p>
+                <p class="purpose">
+                    Remove (unlink) the FILE(s).
+                </p>
+                <p class="options">
+                    Options:<br>
+                    -f, --force ignore nonexistent files and arguments, never prompt<br>
+                    -i prompt before every removal<br>
+                    -I prompt once before removing more than three files, or
+                    when removing recursively; less intrusive than -i,
+                    while still giving protection against most mistakes<br>
+                    -r, -R, --recursive remove directories and their contents recursively<br>
+                    -d, --dir remove empty directories<br>
+                    -v, --verbose explain what is being done<br>
+                </p>
+                <p class="remarks">
+                    By default, rm does not remove directories. Use the --recursive (-r or -R) option to remove each
+                    listed directory, too, along with all of its contents.<br>
+                    To remove a file whose name starts with a '-', for example '-foo', use one of these commands:<br>
+                    rm -- -foo<br>
+                    rm ./-foo<br>
+                </p>
+                <a href="#top">▲</a>
+            </article>
+
+            <article id="cat" class="cmd">
+                <h2>cat</h2>
+                <p class="usage">
+                    Usage: cat [OPTION]... [FILE]...
+                </p>
+                <p class="purpose">
+                    Concatenate FILE(s) to standard output.<br>
+                    With no FILE, or when FILE is -, read standard input.
+                </p>
+                <p class="options">
+                    Options:<br>
+                    -E, --show-ends display $ at end of each line<br>
+                    -n, --number number all output lines<br>
+                    -s, --squeeze-blank suppress repeated empty output lines<br>
+                    -T, --show-tabs display TAB characters as ^I<br>
+                </p>
+                <p class="remarks">
+                    Examples:<br>
+                    cat f - g Output f's contents, then standard input, then g's contents.<br>
+                    cat Copy standard input to standard output.<br>
+                </p>
+                <p class="exit">
+                    Exit Status:<br>
+                </p>
+                <a href="#top">▲</a>
+            </article>
+
+            <article id="head" class="cmd">
+                <h2>head</h2>
+                <p class="usage">
+                    Usage: head [OPTION]... [FILE]...
+                </p>
+                <p class="purpose">
+                    Print the first 10 lines of each FILE to standard output.<br>
+                    With more than one FILE, precede each with a header giving the file name.<br>
+                    With no FILE, or when FILE is -, read standard input.<br>
+                </p>
+                <p class="options">
+                    Options:<br>
+                    -c, --bytes=[-]NUM print the first NUM bytes of each file;
+                    with the leading '-', print all but the last
+                    NUM bytes of each file<br>
+                    -n, --lines=[-]NUM print the first NUM lines instead of the first 10;
+                    with the leading '-', print all but the last
+                    NUM lines of each file<br>
+                        </p>
+                <p class="remarks">
+
+                </p>
+                <a href="#top">▲</a>
+            </article>
+
+            <article id="less" class="cmd">
+                <h2>less</h2>
+                <p class="usage">
+                    Usage: less [OPTION]... [FILE]
+                </p>
+                <p class="purpose">
+                    The less command is mostly used for opening and viewing large files.
+                </p>
+                <p class="options">
+                    Options:<br>
+                    too much to show them 😢
+                </p>
+                <p class="remarks">
+                    Exit less by pressing 'q'!
+                </p>
+                <a href="#top">▲</a>
+            </article>
+
+
+
+            <!-- 
+            <article id="" class="cmd">
+                <h2>ls</h2>
+                <p class="usage">
+
+                </p>
+                <p class="purpose">
+
+                </p>
+                <p class="options">
+                    Options:<br>
+                </p>
+                <p class="remarks">
+
+                </p>
+                <p class="exit">
+                    Exit Status:<br>
+                </p>
+                <a href="#top">▲</a>
+            </article>
+        -->
+        </section>
+
 
     </main>
 
