@@ -45,6 +45,12 @@
                         <li><a href="#less">less</a></li>
                     </ul>
                 </li>
+                <li>
+                    <p>Security</p>
+                    <ul>
+                        <li><a href="ananas.html">passwd</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
     </header>
@@ -55,6 +61,7 @@
         <section class="cmd-area">
 
             <article id="pwd" class="cmd">
+                <p class="goto-top"><a href="#top">▲</a></p>
                 <h2>pwd</h2>
                 <p class="usage">Usage: pwd [-LPW]</p>
                 <p class="purpose">Print the name of the current working directory.</p>
@@ -73,11 +80,11 @@
                     0 unless an invalid option is given or the current directory
                     cannot be read.
                 </p>
-                <p class="goto-top"><a href="#top">▲</a></p>
             </article>
 
 
             <article id="ls" class="cmd">
+                <p class="goto-top"><a href="#top">▲</a></p>
                 <h2>ls</h2>
                 <p class="usage">
                     Usage: ls [OPTION]... [FILE]...
@@ -97,11 +104,11 @@
                     1 if minor problems (e.g., cannot access subdirectory),<br>
                     2 if serious trouble (e.g., cannot access command-line argument).<br>
                 </p>
-                <p class="goto-top"><a href="#top">▲</a></p>
             </article>
-
-
+            
+            
             <article id="cd" class="cmd">
+                <p class="goto-top"><a href="#top">▲</a></p>
                 <h2>cd</h2>
                 <p class="usage">
                     Usage: cd [-L|[-P [-e]] [-@]] [dir]
@@ -132,11 +139,11 @@
                     Returns 0 if the directory is changed, and if $PWD is set successfully when
                     -P is used; non-zero otherwise.
                 </p>
-                <p class="goto-top"><a href="#top">▲</a></p>
             </article>
-
-
+            
+            
             <article id="touch" class="cmd">
+                <p class="goto-top"><a href="#top">▲</a></p>
                 <h2>touch</h2>
                 <p class="usage">
                     Usage: touch [OPTION]... FILE...
@@ -158,11 +165,11 @@
                 <p class="remarks">
                     Note that the -d option accept different time-date formats.
                 </p>
-                <p class="goto-top"><a href="#top">▲</a></p>
             </article>
-
-
+            
+            
             <article id="cp" class="cmd">
+                <p class="goto-top"><a href="#top">▲</a></p>
                 <h2>cp</h2>
                 <p class="usage">
                     Usage: cp [OPTION]... [-T] SOURCE DEST<br>
@@ -187,11 +194,11 @@
                     destination file is missing<br>
                     -v, --verbose explain what is being done<br>
                 </p>
-                <p class="goto-top"><a href="#top">▲</a></p>
             </article>
-
-
+            
+            
             <article id="mv" class="cmd">
+                <p class="goto-top"><a href="#top">▲</a></p>
                 <h2>mv</h2>
                 <p class="usage">
                     Usage: mv [OPTION]... [-T] SOURCE DEST<br>
@@ -212,11 +219,11 @@
                     destination file is missing<br>
                     -v, --verbose explain what is being done<br>
                 </p>
-                <p class="goto-top"><a href="#top">▲</a></p>
             </article>
-
-
+            
+            
             <article id="rm" class="cmd">
+                <p class="goto-top"><a href="#top">▲</a></p>
                 <h2>rm</h2>
                 <p class="usage">
                     Usage: rm [OPTION]... [FILE]...
@@ -242,11 +249,11 @@
                     rm -- -foo<br>
                     rm ./-foo<br>
                 </p>
-                <p class="goto-top"><a href="#top">▲</a></p>
             </article>
-
-
+            
+            
             <article id="mkdir" class="cmd">
+                <p class="goto-top"><a href="#top">▲</a></p>
                 <h2>mkdir</h2>
                 <p class="usage">
                     Usage: mkdir [OPTION]... DIRECTORY...
@@ -261,11 +268,11 @@
                     -v, --verbose print a message for each created directory<br>
                     -Z set SELinux security context of each created directory to the default type<br>
                 </p>
-                <p class="goto-top"><a href="#top">▲</a></p>
             </article>
-
-
+            
+            
             <article id="cat" class="cmd">
+                <p class="goto-top"><a href="#top">▲</a></p>
                 <h2>cat</h2>
                 <p class="usage">
                     Usage: cat [OPTION]... [FILE]...
@@ -289,11 +296,11 @@
                 <p class="exit">
                     Exit Status:<br>
                 </p>
-                <p class="goto-top"><a href="#top">▲</a></p>
             </article>
-
-
+            
+            
             <article id="head" class="cmd">
+                <p class="goto-top"><a href="#top">▲</a></p>
                 <h2>head</h2>
                 <p class="usage">
                     Usage: head [OPTION]... [FILE]...
@@ -312,11 +319,11 @@
                     with the leading '-', print all but the last
                     NUM lines of each file<br>
                     /p>
+                </article>
+                
+                
+                <article id="less" class="cmd">
                 <p class="goto-top"><a href="#top">▲</a></p>
-            </article>
-
-
-            <article id="less" class="cmd">
                 <h2>less</h2>
                 <p class="usage">
                     Usage: less [OPTION]... [FILE]
@@ -326,17 +333,17 @@
                 </p>
                 <p class="options">
                     Options:<br>
-                    too much to show them 😢
+                    too many to show them all 😢
                 </p>
                 <p class="remarks">
                     Exit less by pressing 'q'!
                 </p>
-                <p class="goto-top"><a href="#top">▲</a></p>
             </article>
-
-
+            
+            
             <!-- 
             <article id="" class="cmd">
+                <p class="goto-top"><a href="#top">▲</a></p>
                 <h2>ls</h2>
                 <p class="usage">
 
@@ -353,7 +360,6 @@
                 <p class="exit">
                     Exit Status:<br>
                 </p>
-                <a href="#top">▲</a>
             </article>
         -->
 

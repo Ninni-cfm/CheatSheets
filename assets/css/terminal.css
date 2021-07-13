@@ -7,85 +7,80 @@
     Initial styles
 */
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 body {
-  font-family: "IBM Plex Mono", monospace;
-  background: url("../img/matrix-large.jpg") center/cover no-repeat fixed;
-  color: white;
-  font-size: 100%;
+    font-family: "IBM Plex Mono", monospace;
+    background: url("../img/matrix-large.jpg") center/cover no-repeat fixed;
+    color: white;
+    font-size: 100%;
 }
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 /******************************************************************************
     Navigation area
 */
-
 nav {
-  border: 2px solid #73ad21;
-  margin: 1%;
+    border: 2px solid #73ad21;
+    margin: 1%;
 }
-
 nav a {
-  color: white;
-  font-size: 1.2em;
-  padding: 2%;
+    color: white;
+    font-size: 1.2em;
+    padding: 2%;
 }
 nav ul {
-  list-style-type: none;
+    list-style-type: none;
 }
 nav ul li {
-  display: inline-block;
-  padding-right: 2%;
-  vertical-align: top;
-  font-size: 0.8em;
+    display: inline-block;
+    padding-right: 2%;
+    vertical-align: top;
+    font-size: 0.8em;
 }
-
 nav > ul > li {
-  width: 15%;
-  padding: 1% 2%;
-  font-family: 'Arial';
-  font-size: 1.5em;
+    width: 15%;
+    padding: 1% 2%;
+    font-family: "Arial";
+    font-size: 1.5em;
 }
-
 nav ul > li a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 /******************************************************************************
     Navigation area
 */
 .cmd-area {
-  left: 20%;
-  /* border: 1px solid #fff; */
+    left: 20%;
+    /* border: 1px solid #fff; */
 }
-
 .cmd {
-  margin: 2%;
-  background: black;
-  background: rgba(0,0,0,0.7);
-  padding: 1vmin 2vmin;
-  display: block;
-  border: 2px solid #73ad21;
+    margin: 2%;
+    background: black;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 0 2vmin 1vmin;
+    border: 2px solid #73ad21;
 }
-
 .cmd h2 {
-  font-size: 2em;
-  padding-bottom: 10px;
+    font-size: 2em;
+    padding-bottom: 10px;
 }
 .cmd p {
-  padding-bottom: 10px;
+    padding-bottom: 10px;
 }
-
 .cmd a {
-  padding-bottom: 10px;
-  font-size: 2em;
-  color: white;
+    padding-bottom: 10px;
+    font-size: 2em;
+    color: white;
 }
-
 .usage {
-  font-size: 1.5em;
+    font-size: 1.5em;
+}
+.goto-top {
+  padding-left:98%;
+  display: inline;
 }

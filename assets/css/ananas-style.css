@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap');
+
+/******************************************************************************
+    Initial styles    
+*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/******************************************************************************
+
+*/
+body {
+    font-family: "IBM Plex Mono", monospace;
+
+    background: black;
+    color: whitesmoke;
+    text-align: left;
+    padding: 3%;
+}
+p {
+    padding-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+}
+
+h1 {
+    font-size: 1.5em;
+    padding-bottom: 50px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    white-space: auto;
+    font-size: 1.2em;
+}   
+
+span {
+    color: lightgreen;
+}
+
+li:nth-of-type(2n+3) {
+    padding-top: 1.5em;
+    word-break: break-all;
+}
+li:nth-of-type(odd)::before {
+    /* Display a prompt */
+    color: lightgreen;
+    content: "Neues Passwort: ";
+}
+li:nth-of-type(even){
+    color: lightgreen;
+}
+li:nth-of-type(even)::before{
+    /* Display an error */
+    color: red;
+    content: "Fehler! ";
+}
