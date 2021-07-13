@@ -1,29 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/git.css">
 
     <title>Git commands</title>
 </head>
-<body>
-    <header>
-        <a href="javascript:history.back()">zurück</a>
+
+<body id="top">
+    <header id="navigation">
+        <nav>
+            <ul>
+                <li>
+                    <a href="../../index.html">◄ Home</a>
+                </li>
+                <li>
+                    <p>First steps</p>
+                    <ul>
+                        <li><a href="#git-init">init</a></li>
+                        <li><a href="#git-add">add</a></li>
+                        <li><a href="#git-commit">commit</a></li>
+                    </ul>
+                </li>
+                <li>
+                    Get Status
+                    <ul>
+                        <li><a href="#git-status">status</a></li>
+                        <li><a href="#git-log">log</a></li>
+                    </ul>
+                </li>
+                <li>
+                    Branches
+                    <ul>
+                        <li><a href="#git-branch">branch</a></li>
+                        <li><a href="#git-checkout">checkout</a></li>
+                    </ul>
+                </li>
+                <li>
+                    Everything sync
+                    <ul>
+                        <li><a href="#git-push">push</a></li>
+                        <li><a href="#git-pull">pull</a></li>
+                        <li><a href="#git-merge">merge</a></li>
+
+                    </ul>
+                </li>
+            </ul>
+        </nav>
     </header>
     <main>
-        <nav>
 
-        </nav>
+        <section class="cmd-area">
+
+            <article id="git-init" class="cmd">
+                <h2>init</h2>
+                <p class="usage">
+                    Usage: git init
+                </p>
+                <p class="purpose">
+                    Create an empty Git repository or reinitialize an existing one
+                </p>
+                <p class="options">
+                    Options:<br>
+                </p>
+                <p class="remarks">
+                    This command creates an empty Git repository - basically a .git directory with subdirectories for
+                    objects, refs/heads, refs/tags, and template files. An initial branch without any commits will be
+                    created (see the --initial-branch option below for its name). <br>
+                    Running git init in an existing repository is safe. It will not overwrite things that are already there. The primary reason for rerunning git init is to pick up newly added templates (or to move the repository to another place if --separate-git-dir is given).                </p>
+                <p class="goto-top"><a href="#top">▲</a></p>
+            </article>
+
+
+
+
+            <!-- 
+            <article id="" class="cmd">
+                <h2>ls</h2>
+                <p class="usage">
+
+                </p>
+                <p class="purpose">
+
+                </p>
+                <p class="options">
+                    Options:<br>
+                </p>
+                <p class="remarks">
+
+                </p>
+                <p class="exit">
+                    Exit Status:<br>
+                </p>
+                <p class="goto-top"><a href="#top">▲</a></p>
+            </article>
+        -->
+        </section>
+
 
     </main>
 
     <footer>
-        
+
     </footer>
-    
+
 </body>
+
 </html>

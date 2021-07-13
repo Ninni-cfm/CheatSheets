@@ -12,14 +12,15 @@
 </head>
 
 <body id="top">
+
     <header id="navigation">
         <nav>
             <ul>
                 <li>
-                    <a href="../../index.html">Home</a>
+                    <a href="../../index.html">◄ Home</a>
                 </li>
                 <li>
-                    Browsing
+                    <p>Browsing</p>
                     <ul>
                         <li><a href="#pwd">pwd</a></li>
                         <li><a href="#ls">ls</a></li>
@@ -27,16 +28,17 @@
                     </ul>
                 </li>
                 <li>
-                    Files & folders
+                    <p>Files & folders</p>
                     <ul>
                         <li><a href="#touch">touch</a></li>
                         <li><a href="#cp">cp</a></li>
                         <li><a href="#mv">mv</a></li>
                         <li><a href="#rm">rm</a></li>
+                        <li><a href="#mkdir">mkdir</a></li>
                     </ul>
                 </li>
                 <li>
-                    File content
+                    <p>File content</p>
                     <ul>
                         <li><a href="#cat">cat</a></li>
                         <li><a href="#head">head</a></li>
@@ -46,6 +48,8 @@
             </ul>
         </nav>
     </header>
+
+
     <main>
 
         <section class="cmd-area">
@@ -69,8 +73,9 @@
                     0 unless an invalid option is given or the current directory
                     cannot be read.
                 </p>
-                <a href="#top">▲</a>
+                <p class="goto-top"><a href="#top">▲</a></p>
             </article>
+
 
             <article id="ls" class="cmd">
                 <h2>ls</h2>
@@ -86,17 +91,15 @@
                     -l use a long listing format<br>
                     --help display this help and exit<br>
                 </p>
-                <p class="remarks">
-
-                </p>
                 <p class="exit">
                     Exit Status:<br>
                     0 if OK, <br>
                     1 if minor problems (e.g., cannot access subdirectory),<br>
                     2 if serious trouble (e.g., cannot access command-line argument).<br>
                 </p>
-                <a href="#navigation">▲</a>
+                <p class="goto-top"><a href="#top">▲</a></p>
             </article>
+
 
             <article id="cd" class="cmd">
                 <h2>cd</h2>
@@ -129,8 +132,9 @@
                     Returns 0 if the directory is changed, and if $PWD is set successfully when
                     -P is used; non-zero otherwise.
                 </p>
-                <a href="#top">▲</a>
+                <p class="goto-top"><a href="#top">▲</a></p>
             </article>
+
 
             <article id="touch" class="cmd">
                 <h2>touch</h2>
@@ -138,7 +142,7 @@
                     Usage: touch [OPTION]... FILE...
                 </p>
                 <p class="purpose">
-                    A FILE argument that does not exist is created empty, unless -c or -h
+                    A FILE argument that does not exist is created empty, unless -c
                     is supplied.<br>
                     Update the access and modification times of each FILE to the current time.<br>
                     A FILE argument string of - is handled specially and causes touch to
@@ -154,8 +158,9 @@
                 <p class="remarks">
                     Note that the -d option accept different time-date formats.
                 </p>
-                <a href="#top">▲</a>
+                <p class="goto-top"><a href="#top">▲</a></p>
             </article>
+
 
             <article id="cp" class="cmd">
                 <h2>cp</h2>
@@ -182,8 +187,9 @@
                     destination file is missing<br>
                     -v, --verbose explain what is being done<br>
                 </p>
-                <a href="#top">▲</a>
+                <p class="goto-top"><a href="#top">▲</a></p>
             </article>
+
 
             <article id="mv" class="cmd">
                 <h2>mv</h2>
@@ -206,9 +212,9 @@
                     destination file is missing<br>
                     -v, --verbose explain what is being done<br>
                 </p>
-
-                <a href="#top">▲</a>
+                <p class="goto-top"><a href="#top">▲</a></p>
             </article>
+
 
             <article id="rm" class="cmd">
                 <h2>rm</h2>
@@ -236,8 +242,28 @@
                     rm -- -foo<br>
                     rm ./-foo<br>
                 </p>
-                <a href="#top">▲</a>
+                <p class="goto-top"><a href="#top">▲</a></p>
             </article>
+
+
+            <article id="mkdir" class="cmd">
+                <h2>mkdir</h2>
+                <p class="usage">
+                    Usage: mkdir [OPTION]... DIRECTORY...
+                </p>
+                <p class="purpose">
+                    Create the DIRECTORY(ies), if they do not already exist.
+                </p>
+                <p class="options">
+                    Options:<br>
+                    -m, --mode=MODE set file mode (as in chmod), not a=rwx - umask<br>
+                    -p, --parents no error if existing, make parent directories as needed<br>
+                    -v, --verbose print a message for each created directory<br>
+                    -Z set SELinux security context of each created directory to the default type<br>
+                </p>
+                <p class="goto-top"><a href="#top">▲</a></p>
+            </article>
+
 
             <article id="cat" class="cmd">
                 <h2>cat</h2>
@@ -263,8 +289,9 @@
                 <p class="exit">
                     Exit Status:<br>
                 </p>
-                <a href="#top">▲</a>
+                <p class="goto-top"><a href="#top">▲</a></p>
             </article>
+
 
             <article id="head" class="cmd">
                 <h2>head</h2>
@@ -284,12 +311,10 @@
                     -n, --lines=[-]NUM print the first NUM lines instead of the first 10;
                     with the leading '-', print all but the last
                     NUM lines of each file<br>
-                        </p>
-                <p class="remarks">
-
-                </p>
-                <a href="#top">▲</a>
+                    /p>
+                <p class="goto-top"><a href="#top">▲</a></p>
             </article>
+
 
             <article id="less" class="cmd">
                 <h2>less</h2>
@@ -306,9 +331,8 @@
                 <p class="remarks">
                     Exit less by pressing 'q'!
                 </p>
-                <a href="#top">▲</a>
+                <p class="goto-top"><a href="#top">▲</a></p>
             </article>
-
 
 
             <!-- 
@@ -332,8 +356,8 @@
                 <a href="#top">▲</a>
             </article>
         -->
-        </section>
 
+        </section>
 
     </main>
 
